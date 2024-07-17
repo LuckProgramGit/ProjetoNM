@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/06/2024 às 05:21
+-- Tempo de geração: 17/07/2024 às 20:19
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -55,8 +55,16 @@ CREATE TABLE `carro` (
   `cor_carro` varchar(255) DEFAULT NULL,
   `numero_chassi_carro` varchar(255) DEFAULT NULL,
   `preco_carro` decimal(10,2) DEFAULT NULL,
-  `quantidade_carro` int(11) NOT NULL DEFAULT 1
+  `quantidade_carro` int(11) NOT NULL DEFAULT 1,
+  `lote_carro` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `carro`
+--
+
+INSERT INTO `carro` (`id_carro`, `modelo_carro`, `ano_fabricacao_carro`, `cor_carro`, `numero_chassi_carro`, `preco_carro`, `quantidade_carro`, `lote_carro`) VALUES
+(104, 'Mustang', 2023, 'preto', '488868956555', 125800.00, 1, 55);
 
 -- --------------------------------------------------------
 
@@ -70,6 +78,13 @@ CREATE TABLE `fornecedor` (
   `email_fornecedor` varchar(140) DEFAULT NULL,
   `endereco_fornecedor` varchar(140) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `fornecedor`
+--
+
+INSERT INTO `fornecedor` (`cnpj_fornecedor`, `nome_fornecedor`, `email_fornecedor`, `endereco_fornecedor`) VALUES
+(2147483647, 'PeçasMotors', 'fornecedor@entrega.com', 'rua da entrega, 123');
 
 -- --------------------------------------------------------
 
@@ -99,30 +114,12 @@ CREATE TABLE `produto` (
   `quantidade_produto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estrutura para tabela `registro_peca`
+-- Despejando dados para a tabela `produto`
 --
 
-CREATE TABLE `registro_peca` (
-  `numero` char(9) NOT NULL,
-  `nome` varchar(255) NOT NULL,
-  `preco` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `relatorio`
---
-
-CREATE TABLE `relatorio` (
-  `id_relatorio` int(11) NOT NULL,
-  `valor_final` decimal(10,2) DEFAULT NULL,
-  `data_relatorio` date DEFAULT NULL,
-  `quantidade_relatorio` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `produto` (`id_produto`, `nome_produto`, `cor_produto`, `preco_produto`, `ano_fabricacao_produto`, `quantidade_produto`) VALUES
+(28, 'Astra', 'verde', 125000.00, 2020, 3);
 
 -- --------------------------------------------------------
 
@@ -157,8 +154,19 @@ CREATE TABLE `venda` (
   `id_venda` int(11) NOT NULL,
   `id_carro_venda` int(11) NOT NULL,
   `quantidade_venda` int(11) DEFAULT NULL,
-  `data_venda` date DEFAULT NULL
+  `data_venda` date DEFAULT NULL,
+  `valor_venda` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `venda`
+--
+
+INSERT INTO `venda` (`id_venda`, `id_carro_venda`, `quantidade_venda`, `data_venda`, `valor_venda`) VALUES
+(1313131314, 3, 5, '2021-12-18', 456000),
+(1313131315, 4, 5, '2024-08-05', 456000),
+(1313131316, 7, 8, '2020-02-20', 1200000),
+(1313131317, 15, 2, '2020-02-20', 400000);
 
 --
 -- Índices para tabelas despejadas
@@ -189,18 +197,6 @@ ALTER TABLE `produto`
   ADD PRIMARY KEY (`id_produto`);
 
 --
--- Índices de tabela `registro_peca`
---
-ALTER TABLE `registro_peca`
-  ADD PRIMARY KEY (`numero`);
-
---
--- Índices de tabela `relatorio`
---
-ALTER TABLE `relatorio`
-  ADD PRIMARY KEY (`id_relatorio`);
-
---
 -- Índices de tabela `usuario`
 --
 ALTER TABLE `usuario`
@@ -220,19 +216,13 @@ ALTER TABLE `venda`
 -- AUTO_INCREMENT de tabela `carro`
 --
 ALTER TABLE `carro`
-  MODIFY `id_carro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id_carro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `id_produto` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
--- AUTO_INCREMENT de tabela `relatorio`
---
-ALTER TABLE `relatorio`
-  MODIFY `id_relatorio` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produto` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
@@ -244,7 +234,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `venda`
 --
 ALTER TABLE `venda`
-  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1313131314;
+  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1313131318;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
