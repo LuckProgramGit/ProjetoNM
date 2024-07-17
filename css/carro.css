@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../imgs/8.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+h4 {
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(5, 73, 78, 0.459); 
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+	color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #036d6d70;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #08788b;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn1, .btn2, .btn3 {
+    color: #f7f7f7;
+    background-color: #097afacb;
+    width: 400px;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block; 
+    margin: 0 10px; 
+}
+
+.btn1:hover, .btn3:hover {
+    background-color: #024f66ce;
+}
+
+.btn2 {
+    background-color: #dc3545;
+}
+
+.btn1:hover, .btn3:hover {
+    color: #ffffff;
+}
+.btn2:hover {
+    background-color: #c82333;
+}
+.erro {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}

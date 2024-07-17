@@ -1,0 +1,81 @@
+*{
+    margin-bottom: 0;
+    padding: 0;
+    margin-left: 0;
+    
+}
+
+body {
+    background-image: url('../imgs/13.jpg');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cadastro-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(7, 2, 2, 0.288);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+ 
+
+h2 {
+    text-align: center;
+    color: #f1eded;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #036d6d8f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #1687d386;
+}
+
+.erro {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a.conta-link {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    text-decoration: none;
+}

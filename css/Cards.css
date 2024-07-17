@@ -1,0 +1,60 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.card2 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.card.expandir {
+    max-height: 500px;
+}
+
+
+.conteudo-card {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.conteudo-card.expandir {
+    opacity: 1;
+}
+
+
+.botao-card {
+   float: right;
+   position: relative;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 1px 10px;
+    cursor: pointer;
+   
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}

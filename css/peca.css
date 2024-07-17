@@ -1,0 +1,93 @@
+body {
+    background-image: url(../imgs/17.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    text-align: center;
+    align-items: center;
+    background-color: #063550c9;
+    width: 45%;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+form label {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    width: 30%;
+    padding: 10px;
+    background-color: #0979faee;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #02469e;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn1, .btn2, .btn3 {
+    color: #f7f7f7;
+    background-color: #0979faee;
+    width: 400px;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block; 
+    margin: 10px 10px; 
+}
+
+.btn1:hover, .btn3:hover {
+    background-color: #02469e;
+    color: #ffffff;
+}
+
+.btn2 {
+    background-color: #dc3545;
+}
+
+.btn2:hover {
+    background-color: #c82333;
+}
+
+.erro {
+    color: red;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}

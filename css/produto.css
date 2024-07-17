@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../imgs/16.png');
+    margin: 0;
+    background-size: cover;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
+    color: hsl(210, 100%, 100%);
+}
+
+.cadastro-container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #063550c9;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0074f8cb;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover,
+.btn:hover {
+    background-color: #02469e;
+    color: #ffffff;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.icone {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 25px; 
+    height: auto;
+}
+
+.icone-link {
+    top: 50px;
+    left: 0px;
+    width: 10px; 
+    height: 50px; 
+    display: block;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.btn1, .btn2, .btn3 {
+    color: #fffbfb;
+    background-color: #0979faee;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block; 
+    margin: 10px; 
+}
+
+.btn1:hover, .btn3:hover {
+    background-color: #02469e;
+    color: #ffffff;
+}
+
+.btn2 {
+    background-color: #dc3545;
+}
+
+.btn2:hover {
+    background-color: #c82333;
+    color: #ffffff;
+}
